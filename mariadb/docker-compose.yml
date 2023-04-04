@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: always
+    ports:
+      - 3808:3808
+    volumes:
+      - mariadb_volume:/data/db
+    environment:
+      MARIADB_USER: rohanmohapatra
+      MARIADB_PASSWORD: rohanmohapatra
+      MARIADB_ROOT_PASSWORD: root
+volumes:
+  mariadb_volume:

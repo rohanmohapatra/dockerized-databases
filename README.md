@@ -9,11 +9,15 @@ docker-compose up -d
 
 ### The `<database-name>` can be from the following:
 
-- [cassandra](https://cassandra.apache.org/_/index.html)
 - [postgresql](https://www.postgresql.org/)
 - [oracledb](https://docs.oracle.com/cd/E11882_01/index.htm)
-- [redis](https://redis.io/docs/about/)
 - [mysql](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
+- [mariadb](https://mariadb.org/documentation/)
+
+---
+
+- [cassandra](https://cassandra.apache.org/_/index.html)
+- [redis](https://redis.io/docs/about/)
 - [mongodb](https://www.mongodb.com/docs/manual/tutorial/getting-started/)
 
 ### Contributing
