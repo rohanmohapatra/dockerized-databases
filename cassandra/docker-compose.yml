@@ -8,24 +8,9 @@ services:
       - 7000:7000
       - 9042:9042
     volumes:
-      - cass_volume:/cass
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "/opt/cassandra/bin/cqlsh",
-          "-u cassandra",
-          "-p cassandra",
-          '-e "describe keyspaces"',
-        ]
-      interval: 1m30s
-      timeout: 30s
-      retries: 5
-      start_period: 30s
+      - cass_volume:/var/lib/cassandra
     environment:
       - CASSANDRA_SEEDS=cassandra
-      - CASSANDRA_PASSWORD_SEEDER=yes
-      - CASSANDRA_PASSWORD=cassandra
 
 volumes:
   cass_volume:
