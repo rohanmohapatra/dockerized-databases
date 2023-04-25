@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  mongodb:
+    image: neo4j:latest
+    container_name: neo4j
+    restart: always
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - neo4j_volume:/data
+    environment:
+      NEO4J_AUTH: none
+volumes:
+  neo4j_volume:
