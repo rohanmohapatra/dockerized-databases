@@ -2,8 +2,10 @@ version: "3"
 
 services:
   mssql:
-    build: .
+    image: rohanmohapatra/mssql-server:latest
     container_name: mssql
     restart: always
     ports:
       - 1433:1433
+    environment:
+      SA_PASSWORD: R0hanM0hapatra
