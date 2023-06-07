@@ -17,3 +17,11 @@ Wait for the server to startup and then in a new terminal, run
 ```sh
 docker exec -it mssql /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P R0hanM0hapatra
 ```
+
+## Want to use a local image?
+
+```
+docker build -t mssql-server:latest mssql-server-docker
+```
+
+Changing the image to the local image in the `docker-compose.yml` should then use the local image.
